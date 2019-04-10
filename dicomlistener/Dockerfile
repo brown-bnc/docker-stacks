@@ -1,5 +1,5 @@
 
-FROM ubuntu:latest
+FROM ubuntu:18.10
 
 RUN apt-get update \
   && apt-get install -y python3-pip python3-dev \
@@ -16,8 +16,8 @@ EXPOSE 4096
 
 RUN mkdir /opt/scripts
 
-COPY dicomlistener/docker-entrypoint.sh /opt/scripts
+COPY scripts/dicomlistener-entrypoint.sh /opt/scripts/
 
-ENTRYPOINT ["/opt/scripts/entrypoint.sh"]
+ENTRYPOINT ["/opt/scripts/dicomlistener-entrypoint.sh.sh"]
 #CMD ["service", "xinetd", "start"]
 CMD ["/usr/sbin/xinetd", "-dontfork"]
