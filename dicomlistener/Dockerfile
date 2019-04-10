@@ -16,7 +16,7 @@ EXPOSE 4096
 
 RUN mkdir /opt/scripts
 
-COPY ./dicomlistener/docker-entrypoint.sh /opt/scripts
+COPY dicomlistener/docker-entrypoint.sh /opt/scripts
 
 ENTRYPOINT ["/opt/scripts/entrypoint.sh"]
 #CMD ["service", "xinetd", "start"]
