@@ -51,7 +51,7 @@ do
 	GIT_REV=$(git log -n 1 --pretty=format:%h)
 	TAG="${GIT_REV}"
 
-	IMAGE_NAME=sh-${IMAGE}
+	IMAGE_NAME=${IMAGE}
 	IMAGE_SPEC="${DOCKER_REPO}/${IMAGE_NAME}:${TAG}"
 	docker build -f ${IMAGE}/Dockerfile -t ${IMAGE_SPEC} .
 	${DOCKER_PUSH} ${IMAGE_SPEC}
