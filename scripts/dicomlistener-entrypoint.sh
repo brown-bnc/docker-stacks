@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define useful vars
-PORT="10402"
+PORT="4096"
 TMP_DIR="/tmp"
 LOG_DIR="/incoming/log"
 DATA_DIR="/incoming/data"
