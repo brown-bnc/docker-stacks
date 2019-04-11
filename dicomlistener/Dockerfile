@@ -18,6 +18,6 @@ RUN mkdir /opt/scripts
 
 COPY scripts/dicomlistener-entrypoint.sh /opt/scripts/
 
-ENTRYPOINT ["/opt/scripts/dicomlistener-entrypoint.sh.sh"]
+ENTRYPOINT ["/opt/scripts/dicomlistener-entrypoint.sh"]
 #CMD ["service", "xinetd", "start"]
 CMD ["/usr/sbin/xinetd", "-dontfork"]
